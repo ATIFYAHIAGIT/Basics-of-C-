@@ -1,27 +1,28 @@
+//full pyramid of numbers//
 #include <iostream>
 using namespace std;
 
 int main () {
+    int x,num=1,fun;
     cout<<"Enter number: ";
-    int n,m,i,num;
-    cin>>n;
-    cout<<"Enter the exponent of the number: ";
-    cin>>m;
-    
-    num=0;
+    cin>>x;
+    fun=num-1;
 
-    if (m==0){
-        cout<<"0";
+    for (int i=1;i<=x;i++) {
+        for (int j=1;j<=x-i;j++) {
+            cout<<" ";
+        }
+        for (int j=1;j<=i;j++) {
+            cout<<num;
+            num++;
+        }
+        for (int j=2;j<=i; j++) {
+            num=i-j+1;
+            cout<<num;
+            num--;
+        }
+        cout<<"\n";
+        num=1;
     }
-
-    else if (m==1) {
-        cout<<"m";
-    }
-
-    else { 
-    for (i=1;i=m;i++ ) {
-        num=n*i;
-    }
-        cout<<num;}
     return 0;
 }
