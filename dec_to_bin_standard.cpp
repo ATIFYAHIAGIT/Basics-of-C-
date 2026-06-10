@@ -2,18 +2,18 @@
 using namespace std;
 
 int main () {
-    int n,rem,bin,dig;
-    bin=0,dig=1;
+    int x,rem;
+    long long binary,pval;
+    binary=0,pval=1;
+    cout<<"Enter your number: ";
+    cin>>x;
 
-    cout<<"Enter the number in decimal form:  ";
-    cin>>n;
-
-    while (n>0) {
-        rem=n%2;
-        n=n/2;
-        bin=rem*dig + bin;
-        dig=dig*10;
+    while (x>0) {
+        rem=x%2;
+        x=x/2;
+        binary = rem*pval + binary;
+        pval=pval*10;
     }
-    cout<<"The Binary form of the entered decimal number is: "<<bin;
+    cout<<binary;
     return 0;
 }

@@ -9,9 +9,7 @@ int main () {
    
     cout<<"Enter the number: ";
     cin>>n;
-    
     m = n; 
-
 
     while (n>0) {
         while (i<n) {
@@ -20,16 +18,13 @@ int main () {
             i=i*2;
             }
         }
-       
         n=n/2; 
     }
     cout<<"Digits (p): "<<p<<"\n";
 
     vector<int> arr(p , 0);
 
-    
     t = (int)m; 
-    
     for (int k = p - 1; k >= 0; k--) {
         r = t % 2;
         
